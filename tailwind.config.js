@@ -22,8 +22,8 @@ export default {
           dark: '#E65345'
         },
         glass: {
-          DEFAULT: 'rgba(255, 255, 255, 0.05)',
-          border: 'rgba(255, 255, 255, 0.1)'
+          DEFAULT: 'rgba(255, 255, 255, 0.1)',
+          border: 'rgba(255, 255, 255, 0.2)'
         }
       }
     },
