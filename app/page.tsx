@@ -110,16 +110,16 @@ export default function HomePage() {
         </section>
 
         {/* Featured Products Collection */}
-        <section className="bg-brown-dark py-24 sm:py-32 relative">
+        <section className="bg-transparent py-24 sm:py-32 relative">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-glass-border to-transparent" />
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
             <div className="flex flex-col text-center lg:text-left lg:flex-row justify-between gap-6 pb-12 items-end">
               <div>
-                <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-green">Our Collection</p>
-                <h2 className="mt-4 font-serif text-4xl text-white sm:text-5xl">Marine products of distinction.</h2>
+                <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-green-dark">Our Collection</p>
+                <h2 className="mt-4 font-serif text-4xl text-brown-dark sm:text-5xl">Marine products of distinction.</h2>
               </div>
-              <Link href="/products" className="group inline-flex items-center justify-center gap-3 rounded-full border border-glass-border px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-slate-300 hover:text-white hover:bg-glass transition-all">
-                View full catalogue <ArrowRightIcon size={14} className="transition-transform group-hover:translate-x-1 text-green" />
+              <Link href="/products" className="group inline-flex items-center justify-center gap-3 rounded-full border border-green-dark/30 bg-white/60 backdrop-blur-md px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-brown-dark hover:text-green-dark hover:bg-white transition-all shadow-sm">
+                View full catalogue <ArrowRightIcon size={14} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
             
@@ -131,20 +131,20 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }} 
                   viewport={{ once: true, margin: "-50px" }} 
                   transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
-                  className="group flex flex-col overflow-hidden rounded-2xl bg-brown border border-glass-border relative transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(8,247,190,0.2)] hover:border-green/30"
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-white/60 backdrop-blur-md border border-glass-border relative transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-green/30"
                 >
                   <div className="overflow-hidden relative h-72">
-                    <div className="absolute inset-0 bg-brown-dark/40 group-hover:bg-transparent transition-colors z-10 duration-500" />
+                    <div className="absolute inset-0 bg-transparent group-hover:bg-white/10 transition-colors z-10 duration-500" />
                     <img src={product.image} alt={product.name} className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                    <div className="absolute top-4 right-4 z-20 rounded-full border border-glass-border bg-glass backdrop-blur-md px-3 py-1.5 text-[9px] font-bold uppercase tracking-widest text-green shadow-2xl">
+                    <div className="absolute top-4 right-4 z-20 rounded-full border border-glass-border bg-white/80 backdrop-blur-md px-3 py-1.5 text-[9px] font-bold uppercase tracking-widest text-green-dark shadow-sm">
                       {product.tag}
                     </div>
                   </div>
-                  <div className="p-8 flex flex-col flex-grow relative z-20 bg-gradient-to-t from-brown via-brown to-brown/95">
-                    <h3 className="font-serif text-2xl text-white group-hover:text-green-light transition-colors">{product.name}</h3>
+                  <div className="p-8 flex flex-col flex-grow relative z-20 bg-gradient-to-t from-white via-white to-white/95">
+                    <h3 className="font-serif text-2xl text-brown-dark group-hover:text-green-dark transition-colors">{product.name}</h3>
                     <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 hidden">{product.species}</p>
-                    <p className="mt-5 text-sm leading-relaxed text-slate-400 mb-8 flex-grow line-clamp-3 font-light">{product.description}</p>
-                    <Link href="/contact" className="mt-auto inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.1em] text-green hover:text-white transition-colors w-fit group/btn">
+                    <p className="mt-5 text-sm leading-relaxed text-slate-600 mb-8 flex-grow line-clamp-3 font-light">{product.description}</p>
+                    <Link href="/contact" className="mt-auto inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.1em] text-green border-b border-transparent hover:border-green-dark hover:text-green-dark transition-all w-fit group/btn pb-0.5">
                       Request details 
                       <span className="block h-[1px] w-4 bg-green transition-all group-hover/btn:w-8" />
                       <ArrowRightIcon size={14} className="-ml-1" />
@@ -157,21 +157,21 @@ export default function HomePage() {
         </section>
 
         {/* Global Trade & Philosophy Section */}
-        <section className="bg-brown py-24 sm:py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green/5 via-brown to-brown blur-2xl" />
+        <section className="bg-transparent py-24 sm:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/80 via-transparent to-transparent blur-2xl" />
           
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 relative z-10">
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
               <motion.div 
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
-                className="flex flex-col gap-6 items-start rounded-3xl border border-glass-border bg-glass backdrop-blur-xl p-10 hover:bg-white/5 transition-colors"
+                className="flex flex-col gap-6 items-start rounded-3xl border border-glass-border bg-white/60 backdrop-blur-xl p-10 hover:bg-white/80 transition-colors shadow-sm"
               >
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green/10 border border-green/20 text-green shadow-[0_0_20px_rgba(8,247,190,0.15)]">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green/10 border border-green/30 text-green-dark shadow-sm">
                   <Globe2Icon size={32} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-3xl text-white mb-4">International Outlook</h3>
-                  <p className="text-[15px] leading-relaxed text-slate-400 font-light">
+                  <h3 className="font-serif text-3xl text-brown-dark mb-4">International Outlook</h3>
+                  <p className="text-[15px] leading-relaxed text-slate-600 font-light">
                     Supplying export buyers with a direct Sri Lankan source. Navigate international trade seamlessly with our globally compliant documentation and packaging standards.
                   </p>
                 </div>
@@ -179,14 +179,14 @@ export default function HomePage() {
               
               <motion.div 
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.7 }} 
-                className="flex flex-col gap-6 items-start rounded-3xl border border-glass-border bg-glass backdrop-blur-xl p-10 hover:bg-white/5 transition-colors"
+                className="flex flex-col gap-6 items-start rounded-3xl border border-glass-border bg-white/60 backdrop-blur-xl p-10 hover:bg-white/80 transition-colors shadow-sm"
               >
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-peach/10 border border-peach/20 text-peach shadow-[0_0_20px_rgba(255,111,97,0.15)]">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-peach/10 border border-peach/30 text-peach shadow-sm">
                   <ShieldCheckIcon size={32} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-3xl text-white mb-4">Partnership Mindset</h3>
-                  <p className="text-[15px] leading-relaxed text-slate-400 font-light">
+                  <h3 className="font-serif text-3xl text-brown-dark mb-4">Partnership Mindset</h3>
+                  <p className="text-[15px] leading-relaxed text-slate-600 font-light">
                     Straightforward communication for repeatable, long-term trade. We prioritize transparency, rigorous grading, and maintaining trust over decades of operation.
                   </p>
                 </div>

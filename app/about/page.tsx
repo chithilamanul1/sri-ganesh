@@ -7,7 +7,7 @@ import { PageHero } from '../../src/components/PageHero'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-brown text-slate-200">
+    <div className="min-h-screen bg-transparent text-slate-700">
       <main>
         <PageHero
           eyebrow="About SRI GANESH EXPORT"
@@ -17,7 +17,7 @@ export default function AboutPage() {
         />
         
         {/* Animated Overlapping Section */}
-        <section className="py-24 sm:py-32 overflow-hidden bg-brown">
+        <section className="py-24 sm:py-32 overflow-hidden bg-transparent">
           <div className="mx-auto grid max-w-7xl gap-16 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10">
             
             {/* Left side: Images and Animations */}
@@ -97,16 +97,16 @@ export default function AboutPage() {
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               className="mt-12 lg:mt-0"
             >
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-green/30 bg-green/5 mb-8">
-                <p className="text-[10px] font-extrabold uppercase leading-none tracking-[0.25em] text-green">Our History</p>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-green-dark/30 bg-green-dark/5 mb-8 shadow-sm">
+                <p className="text-[10px] font-extrabold uppercase leading-none tracking-[0.25em] text-green-dark">Our History</p>
               </div>
-              <h2 className="font-serif text-4xl leading-[1.15] text-white sm:text-5xl lg:text-5xl">
-                Sri Lanka's Leader in Dried Seafood Exports <span className="text-green font-serif">Since 1972</span>
+              <h2 className="font-serif text-4xl leading-[1.15] text-brown-dark sm:text-5xl lg:text-5xl drop-shadow-sm">
+                Sri Lanka's Leader in Dried Seafood Exports <span className="text-green-dark font-serif">Since 1972</span>
               </h2>
-              <p className="mt-8 text-[15px] leading-relaxed text-slate-300 font-light max-w-2xl">
+              <p className="mt-8 text-[15px] leading-relaxed text-slate-600 font-light max-w-2xl">
                 The foundation of our business was established in 1972 by our founder’s father through Vinayaga Stores, a trusted name built on commitment, quality, and strong relationships with customers and suppliers.
               </p>
-              <p className="mt-4 text-[15px] leading-relaxed text-slate-300 font-light max-w-2xl">
+              <p className="mt-4 text-[15px] leading-relaxed text-slate-600 font-light max-w-2xl">
                 Continuing this legacy, SRI GANESH EXPORT was officially established in 2004 with a vision to bring Sri Lanka’s premium marine resources to international markets. Over the years, the company has developed strong expertise in sourcing, processing, and exporting high-quality seafood products, especially dried sea cucumber (Beche-de-mer).
               </p>
 
@@ -118,8 +118,8 @@ export default function AboutPage() {
                   'International export standards',
                   'Long-term relationships with global buyers'
                 ].map((item) => (
-                  <div key={item} className="flex gap-4 text-sm font-medium text-slate-200 items-start group">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green/10 border border-green/20 text-green transition-transform group-hover:scale-110 group-hover:bg-green group-hover:text-brown-dark">
+                  <div key={item} className="flex gap-4 text-sm font-medium text-slate-700 items-start group">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green/10 border border-green/30 text-green-dark transition-transform group-hover:scale-110 group-hover:bg-green-dark group-hover:text-white shadow-sm">
                       <CheckIcon size={14} strokeWidth={2.5} />
                     </span> 
                     <span className="pt-1">{item}</span>
@@ -127,23 +127,23 @@ export default function AboutPage() {
                 ))}
               </div>
 
-              <div className="mt-12 bg-glass border border-glass-border rounded-2xl shadow-2xl p-6 sm:p-8 grid grid-cols-3 divide-x divide-glass-border text-center backdrop-blur-md">
+              <div className="mt-12 bg-white/60 border border-glass-border rounded-2xl shadow-xl p-6 sm:p-8 grid grid-cols-3 divide-x divide-glass-border text-center backdrop-blur-md">
                 <div className="group">
-                  <p className="text-4xl font-serif text-white group-hover:text-green transition-colors">50<span className="text-2xl">+</span></p>
-                  <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-2 font-bold">Years of<br/>Excellence</p>
+                  <p className="text-4xl font-serif text-brown-dark group-hover:text-green-dark transition-colors">50<span className="text-2xl">+</span></p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-2 font-bold">Years of<br/>Excellence</p>
                 </div>
                 <div className="group">
-                  <p className="text-4xl font-serif text-white group-hover:text-green transition-colors">500<span className="text-2xl">+</span></p>
-                  <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-2 font-bold">Expert<br/>Divers</p>
+                  <p className="text-4xl font-serif text-brown-dark group-hover:text-green-dark transition-colors">500<span className="text-2xl">+</span></p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-2 font-bold">Expert<br/>Divers</p>
                 </div>
                 <div className="group">
-                  <p className="text-4xl font-serif text-white group-hover:text-green transition-colors">15<span className="text-2xl">+</span></p>
-                  <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-2 font-bold">Export<br/>Countries</p>
+                  <p className="text-4xl font-serif text-brown-dark group-hover:text-green-dark transition-colors">15<span className="text-2xl">+</span></p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-2 font-bold">Export<br/>Countries</p>
                 </div>
               </div>
 
               <div className="mt-10">
-                <Link href="/products" className="inline-flex items-center gap-3 bg-green hover:bg-green-light px-7 py-4 text-xs font-extrabold uppercase tracking-[0.15em] text-brown-dark rounded-full transition shadow-[0_0_20px_rgba(8,247,190,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(8,247,190,0.5)]">
+                <Link href="/products" className="inline-flex items-center gap-3 bg-green-dark hover:bg-green px-7 py-4 text-xs font-extrabold uppercase tracking-[0.15em] text-white rounded-full transition shadow-lg hover:scale-105 hover:shadow-[0_0_30px_rgba(44,110,67,0.3)]">
                   Our Products <ArrowRightIcon size={18} />
                 </Link>
               </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
         </section>
 
         {/* Vision & Mission Section */}
-        <section className="bg-brown-dark py-24 sm:py-32 relative text-slate-200">
+        <section className="bg-transparent py-24 sm:py-32 relative text-slate-700">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-glass-border to-transparent" />
           
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -162,22 +162,22 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-glass border border-glass-border p-10 sm:p-12 rounded-3xl shadow-2xl backdrop-blur-md relative overflow-hidden group hover:bg-white/5 transition-colors"
+                className="bg-white/60 border border-glass-border p-10 sm:p-12 rounded-3xl shadow-xl backdrop-blur-md relative overflow-hidden group hover:bg-white/80 transition-colors"
               >
                 <div className="absolute top-0 left-0 w-1 h-full bg-green" />
-                <h3 className="font-serif text-3xl text-white">Our Mission</h3>
-                <p className="mt-6 text-[15px] leading-relaxed text-slate-300 font-light max-w-md">To become a trusted global seafood supplier by combining traditional business values with modern export practices while delivering high-quality marine products to international markets.</p>
+                <h3 className="font-serif text-3xl text-brown-dark">Our Mission</h3>
+                <p className="mt-6 text-[15px] leading-relaxed text-slate-600 font-light max-w-md">To become a trusted global seafood supplier by combining traditional business values with modern export practices while delivering high-quality marine products to international markets.</p>
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-glass border border-glass-border p-10 sm:p-12 rounded-3xl shadow-2xl backdrop-blur-md relative overflow-hidden group hover:bg-white/5 transition-colors"
+                className="bg-white/60 border border-glass-border p-10 sm:p-12 rounded-3xl shadow-xl backdrop-blur-md relative overflow-hidden group hover:bg-white/80 transition-colors"
               >
                 <div className="absolute top-0 left-0 w-1 h-full bg-peach" />
-                <h3 className="font-serif text-3xl text-white">Our Vision</h3>
-                <p className="mt-6 text-[15px] leading-relaxed text-slate-300 font-light max-w-md">To expand Sri Lankan seafood exports worldwide and become a recognised name in the global dried seafood industry.</p>
+                <h3 className="font-serif text-3xl text-brown-dark">Our Vision</h3>
+                <p className="mt-6 text-[15px] leading-relaxed text-slate-600 font-light max-w-md">To expand Sri Lankan seafood exports worldwide and become a recognised name in the global dried seafood industry.</p>
               </motion.div>
             </div>
 
@@ -186,15 +186,15 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-16 sm:mt-24 text-center bg-brown border border-glass-border text-slate-200 rounded-3xl p-12 sm:p-16 shadow-2xl relative overflow-hidden"
+              className="mt-16 sm:mt-24 text-center bg-white/60 border border-glass-border text-slate-700 rounded-3xl p-12 sm:p-16 shadow-xl relative overflow-hidden backdrop-blur-md"
             >
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green/10 via-transparent to-transparent opacity-60 pointer-events-none" />
               
-              <h3 className="font-serif text-3xl sm:text-5xl text-white relative z-10">Trust – Quality – Reliability – Commitment</h3>
-              <p className="mt-8 max-w-2xl mx-auto text-[15px] leading-relaxed text-slate-300 font-light relative z-10">
+              <h3 className="font-serif text-3xl sm:text-5xl text-brown-dark relative z-10 drop-shadow-sm">Trust – Quality – Reliability – Commitment</h3>
+              <p className="mt-8 max-w-2xl mx-auto text-[15px] leading-relaxed text-slate-600 font-light relative z-10">
                 Our deep industry knowledge allows us to select and supply quality marine products that meet the expectations of international customers.
               </p>
-              <Link href="/contact" className="mt-10 inline-flex items-center gap-3 bg-green px-8 py-4 text-xs font-extrabold uppercase tracking-[0.15em] text-brown-dark transition-all hover:bg-green-light rounded-full shadow-[0_0_20px_rgba(8,247,190,0.3)] hover:scale-105 relative z-10">
+              <Link href="/contact" className="mt-10 inline-flex items-center gap-3 bg-green-dark px-8 py-4 text-xs font-extrabold uppercase tracking-[0.15em] text-white transition-all hover:bg-green rounded-full shadow-[0_0_20px_rgba(44,110,67,0.3)] hover:scale-105 relative z-10">
                 Talk to our export team
               </Link>
             </motion.div>
