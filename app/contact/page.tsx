@@ -29,11 +29,11 @@ export default function ContactPage() {
                     <span className="mt-1 block font-semibold">exports@sriganeshexports.lk</span>
                   </span>
                 </a>
-                <a href="tel:+94771234567" className="flex items-start gap-4 py-4 text-brown">
+                <a href="tel:+94773223057" className="flex items-start gap-4 py-4 text-brown">
                   <PhoneIcon className="mt-0.5 text-green" size={20} />
                   <span>
                     <span className="block text-xs font-extrabold uppercase tracking-[0.11em] text-brown/60">Call / WhatsApp</span>
-                    <span className="mt-1 block font-semibold">+94 77 123 4567</span>
+                    <span className="mt-1 block font-semibold">+94 77 322 3057</span>
                   </span>
                 </a>
                 <div className="flex items-start gap-4 py-4">
