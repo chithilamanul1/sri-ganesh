@@ -45,7 +45,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
   
   return (
     <header 
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/70 backdrop-blur-md border-b border-glass-border shadow-lg py-2' : 'bg-transparent border-transparent py-4'}`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/90 backdrop-blur-xl border-b border-brown/10 shadow-lg py-2' : 'bg-white/75 backdrop-blur-lg border-b border-brown/5 py-3'}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-brown-dark z-50">
@@ -94,7 +94,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+      <div className={`fixed inset-0 bg-[#FAF5F0] z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-8 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
         <nav className="flex flex-col gap-6 flex-grow">
           {navigation.map((item, i) => (
             <NavLink
