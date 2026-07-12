@@ -3,7 +3,7 @@
 import { CheckIcon, WavesIcon, ArrowRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { PageHero } from '../src/components/PageHero'
+import { PageHero } from '../../src/components/PageHero'
 
 export default function AboutPage() {
   return (

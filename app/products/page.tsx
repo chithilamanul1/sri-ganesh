@@ -3,8 +3,8 @@
 import { ArrowRightIcon, ArrowUpRightIcon, PackageCheckIcon } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { PageHero } from '../components/PageHero'
-import { products } from '../data/products'
+import { PageHero } from '../../src/components/PageHero'
+import { products } from '../../src/data/products'
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-peach text-brown">

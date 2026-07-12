@@ -1,7 +1,7 @@
 
 import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react'
-import { ContactForm } from '../components/ContactForm'
-import { PageHero } from '../components/PageHero'
+import { ContactForm } from '../../src/components/ContactForm'
+import { PageHero } from '../../src/components/PageHero'
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-peach text-brown">

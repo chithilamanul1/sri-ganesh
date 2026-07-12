@@ -3,7 +3,7 @@
 import { ArrowRightIcon, CheckIcon, Globe2Icon, ShieldCheckIcon } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { products } from '../data/products'
+import { products } from '../src/data/products'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-peach text-brown">

@@ -1,7 +1,7 @@
 
 import { ShieldCheckIcon } from 'lucide-react'
 import Link from 'next/link'
-import { PageHero } from '../components/PageHero'
+import { PageHero } from '../../src/components/PageHero'
 const stages = [
   ['01', 'Source & receive', 'We work with trusted local supply channels and inspect product on receipt.'],
   ['02', 'Process & grade', 'Products are cleaned, dried, sorted, and graded to the agreed specification.'],
