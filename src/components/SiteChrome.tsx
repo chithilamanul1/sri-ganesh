@@ -45,10 +45,10 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
   
   return (
     <header 
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/90 backdrop-blur-xl border-b border-brown/10 shadow-lg py-2' : 'bg-white/75 backdrop-blur-lg border-b border-brown/5 py-3'}`}
+      className={`fixed top-0 inset-x-0 z-[1000] transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/95 backdrop-blur-xl border-b border-brown/10 shadow-lg py-2' : 'bg-white/85 backdrop-blur-lg border-b border-brown/5 py-3'}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-brown-dark z-50">
+        <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-brown-dark relative z-[1001]">
           <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300 mix-blend-multiply" />
           <span className="leading-tight hidden sm:block">
             <span className="block font-serif text-[19px] tracking-wide group-hover:text-green-dark transition-colors text-brown-dark font-bold">Sri Ganesh</span>
@@ -86,7 +86,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
         <button
           type="button"
           aria-label="Toggle Menu"
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-white border-2 border-green/20 text-green-dark lg:hidden z-50 transition-all hover:bg-green/10 hover:border-green-dark shadow-md"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white border-2 border-green/20 text-green-dark lg:hidden relative z-[1001] transition-all hover:bg-green/10 hover:border-green-dark shadow-md"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <XIcon size={20} /> : <MenuIcon size={20} />}
@@ -94,7 +94,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-[#FAF5F0] z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-8 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+      <div className={`fixed inset-0 z-[999] lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-8 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`} style={{ backgroundColor: '#FAF5F0' }}>
         <nav className="flex flex-col gap-6 flex-grow">
           {navigation.map((item, i) => (
             <NavLink
