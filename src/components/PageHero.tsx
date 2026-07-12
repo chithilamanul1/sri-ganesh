@@ -1,4 +1,4 @@
-import React from 'react'
+
 type PageHeroProps = { eyebrow: string; title: string; description: string; image: string }
 export function PageHero({ eyebrow, title, description, image }: PageHeroProps) {
   return (

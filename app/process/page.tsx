@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { ShieldCheckIcon } from 'lucide-react'
 import Link from 'next/link'
 import { PageHero } from '../components/PageHero'

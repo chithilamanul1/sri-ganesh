@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react'
 import { ContactForm } from '../components/ContactForm'
 import { PageHero } from '../components/PageHero'

@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+
 import { ArrowRightIcon, CheckIcon, Globe2Icon, ShieldCheckIcon } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
   ArrowUpRightIcon,
   FacebookIcon,
@@ -51,7 +51,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
                 key={item.to}
                 to={item.to}
                 end={item.to === '/'}
-                className={({ isActive }) =>
+                className={({ isActive }: { isActive: boolean }) =>
                   `border-b pb-1 text-[11px] font-extrabold uppercase leading-none tracking-[0.14em] transition ${isActive ? 'border-green-dark text-green-dark' : `border-transparent ${textClass} hover:border-green-dark hover:text-green-dark`}`
                 }
               >
@@ -79,7 +79,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
               to={item.to}
               end={item.to === '/'}
               onClick={() => setMenuOpen(false)}
-              className={({ isActive }) =>
+              className={({ isActive }: { isActive: boolean }) =>
                 `block border-b border-brown/10 py-4 text-sm font-bold uppercase tracking-[0.12em] ${isActive ? 'text-green' : 'text-brown'}`
               }
             >
