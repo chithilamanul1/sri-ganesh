@@ -107,15 +107,16 @@ export default function AboutPage() {
                 The foundation of our business was established in 1972 by our founder’s father through Vinayaga Stores, a trusted name built on commitment, quality, and strong relationships with customers and suppliers.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-slate-300 font-light max-w-2xl">
-                Continuing this legacy, SRI GANESH EXPORT was officially established in 2004 with a vision to bring Sri Lanka’s premium marine resources to international markets. Over the years, we have developed strong expertise in sourcing, processing, and exporting high-quality seafood products, especially dried sea cucumber.
+                Continuing this legacy, SRI GANESH EXPORT was officially established in 2004 with a vision to bring Sri Lanka’s premium marine resources to international markets. Over the years, the company has developed strong expertise in sourcing, processing, and exporting high-quality seafood products, especially dried sea cucumber (Beche-de-mer).
               </p>
 
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
                 {[
-                  'Premium Product Quality', 
-                  'Sustainable Harvesting Practices', 
-                  'Reliable Sourcing Networks', 
-                  '50+ Years Export Experience'
+                  'Premium product quality', 
+                  'Reliable sourcing networks', 
+                  'Careful processing methods',
+                  'International export standards',
+                  'Long-term relationships with global buyers'
                 ].map((item) => (
                   <div key={item} className="flex gap-4 text-sm font-medium text-slate-200 items-start group">
                     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green/10 border border-green/20 text-green transition-transform group-hover:scale-110 group-hover:bg-green group-hover:text-brown-dark">

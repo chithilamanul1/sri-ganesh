@@ -49,7 +49,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-white z-50">
-          <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90 transition-transform group-hover:scale-105 duration-300" />
+          <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300" />
           <span className="leading-tight hidden sm:block">
             <span className="block font-serif text-[19px] tracking-wide group-hover:text-green-light transition-colors">Sri Ganesh</span>
             <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-green/80">
@@ -134,7 +134,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-10 relative z-10">
         <div>
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity w-fit mb-6">
-            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain brightness-0 invert opacity-90" />
+            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain" />
             <span className="font-serif text-2xl text-white">Sri Ganesh Exports</span>
           </Link>
           <p className="max-w-md text-sm leading-relaxed text-slate-400 font-light">
