@@ -19,11 +19,11 @@
 body {
   margin: 0;
   min-width: 320px;
-  background-color: #0B131E;
+  background-color: #1C100C;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(8, 247, 190, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(3, 181, 170, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(255, 111, 97, 0.08) 0%, transparent 30%);
+    radial-gradient(circle at 10% 20%, rgba(58, 142, 88, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(244, 213, 197, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(130, 77, 67, 0.1) 0%, transparent 30%);
   background-attachment: fixed;
   color: #F1F5F9;
   font-size: 16px;

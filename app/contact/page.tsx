@@ -7,7 +7,7 @@ import { PageHero } from '../../src/components/PageHero'
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-ocean text-slate-200">
+    <div className="min-h-screen bg-brown text-slate-200">
       <main>
         <PageHero
           eyebrow="Wholesale enquiries"
@@ -16,11 +16,11 @@ export default function ContactPage() {
           image="/image4.JPG"
         />
         <section className="py-20 sm:py-28 lg:py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-teal/5 via-ocean to-ocean blur-2xl pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-green/5 via-brown to-brown blur-2xl pointer-events-none" />
           
           <div className="mx-auto grid max-w-7xl gap-16 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-10 relative z-10">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }}>
-              <p className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-teal">Contact our export team</p>
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-green">Contact our export team</p>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl">Start with the details that matter.</h2>
               <p className="mt-6 max-w-md text-[15px] leading-relaxed text-slate-300 font-light">
                 Product, quantity, preferred grade, and destination are the most useful starting points for a prompt response.
@@ -35,7 +35,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 * i, duration: 0.5 }}
                     key={item.label} href={item.href} className="group flex items-start gap-5 p-4 rounded-2xl border border-transparent hover:border-glass-border hover:bg-glass transition-colors -ml-4"
                   >
-                    <div className="mt-0.5 p-2.5 rounded-full bg-teal/10 border border-teal/20 text-teal group-hover:bg-teal group-hover:text-ocean-dark transition-all">
+                    <div className="mt-0.5 p-2.5 rounded-full bg-green/10 border border-green/20 text-green group-hover:bg-green group-hover:text-brown-dark transition-all">
                       <item.icon size={20} />
                     </div>
                     <div>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.5 }}
                   className="flex items-start gap-5 p-4 rounded-2xl border border-transparent -ml-4"
                 >
-                  <div className="mt-0.5 p-2.5 rounded-full bg-teal/10 border border-teal/20 text-teal">
+                  <div className="mt-0.5 p-2.5 rounded-full bg-green/10 border border-green/20 text-green">
                     <MapPinIcon size={20} />
                   </div>
                   <div>
