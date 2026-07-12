@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react'
 import { CheckIcon, ChevronDownIcon, SendIcon } from 'lucide-react'
 import { products } from '../data/products'

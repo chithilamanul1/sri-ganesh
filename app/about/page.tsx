@@ -13,7 +13,7 @@ export default function AboutPage() {
           eyebrow="About SRI GANESH EXPORT"
           title="A Legacy Built on Trust Since 1972"
           description="SRI GANESH EXPORT is a Sri Lankan seafood export company with a proud family heritage spanning more than five decades."
-          image="/about-hero.jpg"
+          image="/IMG_1026.JPG"
         />
         
         {/* Animated Overlapping Section */}

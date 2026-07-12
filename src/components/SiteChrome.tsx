@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react'
 import {
   ArrowUpRightIcon,
@@ -6,7 +7,19 @@ import {
   MenuIcon,
   XIcon,
 } from 'lucide-react'
-import { Link, NavLink } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+function NavLink({ to, children, end, onClick, className }: any) {
+  const pathname = usePathname()
+  const isActive = end ? pathname === to : pathname.startsWith(to)
+  return (
+    <Link href={to} onClick={onClick} className={className({ isActive })}>
+      {children}
+    </Link>
+  )
+}
+
 const navigation = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
@@ -23,10 +36,8 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
     <header className={`relative z-30 ${overlay ? 'absolute inset-x-0 top-0' : 'bg-peach'}`}>
       <div className={`border-b ${borderClass}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <Link to="/" aria-label="Sri Ganesh Exports home" className={`group flex items-center gap-3 ${textClass}`}>
-            <span className="flex h-10 w-10 items-center justify-center border border-green text-lg font-semibold text-green transition group-hover:bg-green group-hover:text-brown">
-              SG
-            </span>
+          <Link href="/" aria-label="Sri Ganesh Exports home" className={`group flex items-center gap-3 ${textClass}`}>
+            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain" />
             <span className="leading-[1.05]">
               <span className="block font-serif text-[21px] tracking-wide">Sri Ganesh</span>
               <span className="mt-1 block text-[9px] font-bold uppercase leading-none tracking-[0.22em] text-green-dark">
@@ -47,7 +58,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
                 {item.label}
               </NavLink>
             ))}
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-green px-5 py-3 text-[11px] font-extrabold uppercase leading-none tracking-[0.12em] text-white transition hover:bg-green-dark">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-green px-5 py-3 text-[11px] font-extrabold uppercase leading-none tracking-[0.12em] text-white transition hover:bg-green-dark">
               Get a quote <ArrowUpRightIcon size={14} aria-hidden="true" />
             </Link>
           </nav>
@@ -75,7 +86,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
               {item.label}
             </NavLink>
           ))}
-          <Link to="/contact" onClick={() => setMenuOpen(false)} className="mt-5 inline-flex bg-green px-5 py-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
+          <Link href="/contact" onClick={() => setMenuOpen(false)} className="mt-5 inline-flex bg-green px-5 py-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
             Get a quote
           </Link>
         </nav>
@@ -88,8 +99,8 @@ export function SiteFooter() {
     <footer className="bg-brown-dark text-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-9 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-10">
         <div>
-          <Link to="/" className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center border border-green text-sm font-semibold text-green-light">SG</span>
+          <Link href="/" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
             <span className="font-serif text-xl">Sri Ganesh Exports</span>
           </Link>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/60">
@@ -105,9 +116,14 @@ export function SiteFooter() {
               <InstagramIcon size={16} />
             </a>
           </div>
-          <p className="text-xs font-semibold text-white/50">
-            © {new Date().getFullYear()} Sri Ganesh Exports. Sri Lanka.
-          </p>
+          <div className="flex flex-col md:text-right gap-1">
+            <p className="text-xs font-semibold text-white/50">
+              © {new Date().getFullYear()} Sri Ganesh Exports. Sri Lanka.
+            </p>
+            <p className="text-[10px] text-white/40">
+              made by seranex.lk love with chithila manul (0728382638)
+            </p>
+          </div>
         </div>
       </div>
     </footer>
