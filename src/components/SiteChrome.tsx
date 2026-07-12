@@ -45,14 +45,14 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
   
   return (
     <header 
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolledOrMenu ? 'bg-brown/80 backdrop-blur-md border-b border-glass-border shadow-2xl py-2' : 'bg-transparent border-transparent py-4'}`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/70 backdrop-blur-md border-b border-glass-border shadow-lg py-2' : 'bg-transparent border-transparent py-4'}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-white z-50">
+        <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-brown-dark z-50">
           <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300" />
           <span className="leading-tight hidden sm:block">
-            <span className="block font-serif text-[19px] tracking-wide group-hover:text-green-light transition-colors">Sri Ganesh</span>
-            <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-green/80">
+            <span className="block font-serif text-[19px] tracking-wide group-hover:text-green-dark transition-colors text-brown-dark font-bold">Sri Ganesh</span>
+            <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-green-dark/90">
               Exports · Sri Lanka
             </span>
           </span>
@@ -65,7 +65,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
               to={item.to}
               end={item.to === '/'}
               className={({ isActive }: { isActive: boolean }) =>
-                `relative text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${isActive ? 'text-green' : 'text-slate-300 hover:text-white'}`
+                `relative text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${isActive ? 'text-green-dark' : 'text-slate-600 hover:text-brown-dark'}`
               }
             >
               {({ isActive }: { isActive: boolean }) => (
@@ -78,14 +78,14 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
               )}
             </NavLink>
           ))}
-          <Link href="/contact" className="ml-4 inline-flex items-center justify-center gap-2 rounded-full border border-green/50 bg-green/10 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-green transition-all hover:bg-green hover:text-brown hover:shadow-[0_0_15px_rgba(8,247,190,0.3)] hover:scale-105">
+          <Link href="/contact" className="ml-4 inline-flex items-center justify-center gap-2 rounded-full border border-green-dark/30 bg-green-dark/10 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-green-dark transition-all hover:bg-green-dark hover:text-white hover:shadow-[0_0_15px_rgba(44,110,67,0.2)] hover:scale-105">
             Get a quote <ArrowUpRightIcon size={14} className="opacity-80" />
           </Link>
         </nav>
         
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-glass-border text-white lg:hidden z-50 transition-colors hover:bg-white/10 hover:text-green"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/40 border border-glass-border text-brown-dark lg:hidden z-50 transition-colors hover:bg-white/60 hover:text-green-dark shadow-sm"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <XIcon size={18} /> : <MenuIcon size={18} />}
@@ -93,7 +93,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-brown-dark z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+      <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
         <nav className="flex flex-col gap-6 flex-grow">
           {navigation.map((item, i) => (
             <NavLink
@@ -102,7 +102,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
               end={item.to === '/'}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }: { isActive: boolean }) =>
-                `text-2xl font-serif border-b border-glass-border pb-4 transition-colors ${isActive ? 'text-green' : 'text-white hover:text-green-light'}`
+                `text-2xl font-serif border-b border-glass-border pb-4 transition-colors ${isActive ? 'text-green-dark' : 'text-slate-700 hover:text-brown-dark'}`
               }
             >
               <div 
@@ -116,7 +116,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
         <Link 
           href="/contact" 
           onClick={() => setMenuOpen(false)} 
-          className="mt-8 flex w-full h-14 items-center justify-center gap-3 rounded-full bg-green text-xs font-bold uppercase tracking-[0.15em] text-brown-dark"
+          className="mt-8 flex w-full h-14 items-center justify-center gap-3 rounded-full bg-green-dark text-xs font-bold uppercase tracking-[0.15em] text-white shadow-lg"
           style={{ transform: menuOpen ? 'translateY(0)' : 'translateY(20px)', opacity: menuOpen ? 1 : 0, transitionDelay: `0.5s`, transitionDuration: '0.4s' }}
         >
           Get a quote <ArrowUpRightIcon size={16} />
@@ -128,16 +128,16 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-brown-dark border-t border-glass-border text-slate-300 relative overflow-hidden">
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-green/5 blur-[100px] rounded-full pointer-events-none" />
+    <footer className="bg-white/40 backdrop-blur-md border-t border-glass-border text-slate-600 relative overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-green/10 blur-[100px] rounded-full pointer-events-none" />
       
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-10 relative z-10">
         <div>
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity w-fit mb-6">
             <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain" />
-            <span className="font-serif text-2xl text-white">Sri Ganesh Exports</span>
+            <span className="font-serif text-2xl text-brown-dark font-bold">Sri Ganesh Exports</span>
           </Link>
-          <p className="max-w-md text-sm leading-relaxed text-slate-400 font-light">
+          <p className="max-w-md text-sm leading-relaxed text-slate-500 font-light">
             Premium Sri Lankan marine products for international wholesale markets. Operating with integrity and transparency since inception.
           </p>
         </div>
@@ -148,17 +148,17 @@ export function SiteFooter() {
               { icon: FacebookIcon, label: 'Facebook' },
               { icon: InstagramIcon, label: 'Instagram' }
             ].map((social) => (
-              <a key={social.label} href="#" aria-label={social.label} className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-glass-border bg-glass transition-all hover:border-green/50 hover:bg-green/10 hover:-translate-y-1">
-                <social.icon size={16} className="text-slate-300 transition-colors group-hover:text-green" />
+              <a key={social.label} href="#" aria-label={social.label} className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-glass-border bg-white/50 transition-all hover:border-green/30 hover:bg-green/10 hover:-translate-y-1 shadow-sm">
+                <social.icon size={16} className="text-slate-500 transition-colors group-hover:text-green-dark" />
               </a>
             ))}
           </div>
           
           <div className="flex flex-col lg:text-right gap-2 border-t border-glass-border pt-6 lg:border-t-0 lg:pt-0 w-full lg:w-auto">
-            <p className="text-xs font-medium text-slate-400">
+            <p className="text-xs font-medium text-slate-600">
               © {new Date().getFullYear()} Sri Ganesh Exports. Sri Lanka.
             </p>
-            <p className="text-[10px] uppercase tracking-widest text-slate-600">
+            <p className="text-[10px] uppercase tracking-widest text-slate-400">
               made by seranex.lk love with chithila manul (0728382638)
             </p>
           </div>

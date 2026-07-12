@@ -9,15 +9,15 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    name: 'Sea Cucumber',
-    species: 'Holothurian',
+    name: 'Disco / Brown Fish Sea Cucumber',
+    species: 'Holothuria spinifera',
     description: 'Carefully processed and sun-dried for consistent texture, moisture control, and export-grade quality.',
     image: '/image1.JPG',
     tag: 'Premium dried',
     specification: 'Available by grade, size, and packing requirement.',
   },
   {
-    name: 'Sand Fish',
+    name: 'Sand Fish Sea Cucumber',
     species: 'Holothuria scabra',
     description: 'A prized tropical sea cucumber, expertly sourced and processed for specialist international buyers.',
     image: '/image2.JPG',
@@ -25,9 +25,9 @@ export const products: Product[] = [
     specification: 'Discuss current availability and preferred finish with our team.',
   },
   {
-    name: 'Dried Cuttlefish',
-    species: 'Sepia species',
-    description: 'Carefully cleaned and dried cuttlefish, selected for consistent size, finish, and export-ready packing.',
+    name: 'Dried Sea Cucumber',
+    species: 'Holothuroidea species',
+    description: 'Carefully cleaned and dried sea cucumber, selected for consistent size, finish, and export-ready packing.',
     image: '/image3.JPG',
     tag: 'Export selected',
     specification: 'Prepared to suit wholesale quantities and destination needs.',
@@ -41,9 +41,9 @@ export const products: Product[] = [
     specification: 'Grading can be discussed against your market specification.',
   },
   {
-    name: 'Dried Abalone',
-    species: 'Haliotis species',
-    description: 'A rare delicacy, graded and packed with attention to presentation, preservation, and shipment readiness.',
+    name: 'Dried Sea Cucumber',
+    species: 'Holothuroidea species',
+    description: 'A prized sea cucumber variety, graded and packed with attention to presentation, preservation, and shipment readiness.',
     image: '/IMG_1025.JPG',
     tag: 'Limited supply',
     specification: 'Limited supply; early enquiries are encouraged.',

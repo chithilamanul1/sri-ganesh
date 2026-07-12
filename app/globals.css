@@ -19,13 +19,13 @@
 body {
   margin: 0;
   min-width: 320px;
-  background-color: #1C100C;
+  background-color: #FAF5F0;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(58, 142, 88, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(244, 213, 197, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(130, 77, 67, 0.1) 0%, transparent 30%);
+    radial-gradient(circle at 10% 20%, rgba(58, 142, 88, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(244, 213, 197, 0.3) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(130, 77, 67, 0.05) 0%, transparent 40%);
   background-attachment: fixed;
-  color: #F1F5F9;
+  color: #38221B;
   font-size: 16px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;

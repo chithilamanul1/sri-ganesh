@@ -7,12 +7,12 @@ import { products } from '../src/data/products'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-brown text-slate-200 font-sans selection:bg-green selection:text-brown-dark">
+    <div className="min-h-screen bg-transparent text-slate-700 font-sans selection:bg-green selection:text-white">
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-24 pb-32 md:pb-40">
-          <video autoPlay loop muted playsInline src="/IMG_2292.MOV" className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-screen grayscale" />
-          <div className="absolute inset-0 bg-gradient-to-b from-brown-dark/90 via-brown/60 to-brown" aria-hidden="true" />
+          <video autoPlay loop muted playsInline src="/IMG_2292.MOV" className="absolute inset-0 h-full w-full object-cover opacity-15 mix-blend-multiply grayscale" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent" aria-hidden="true" />
           
           <div className="relative z-10 mx-auto max-w-5xl px-5 sm:px-8 flex flex-col items-center w-full my-auto text-center">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}>
@@ -23,22 +23,22 @@ export default function HomePage() {
                 </p>
                 <span className="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-green" />
               </div>
-              <h1 className="font-serif text-5xl leading-[1.1] text-white mb-6 sm:text-7xl lg:text-8xl drop-shadow-2xl">
+              <h1 className="font-serif text-5xl leading-[1.1] text-brown-dark mb-6 sm:text-7xl lg:text-8xl drop-shadow-sm">
                 Sri Lanka's Finest <br />
-                <span className="italic bg-clip-text text-transparent bg-gradient-to-r from-green-light to-green">Ocean Harvest</span>
+                <span className="italic bg-clip-text text-transparent bg-gradient-to-r from-green to-green-dark">Ocean Harvest</span>
               </h1>
-              <p className="mx-auto max-w-2xl text-[15px] leading-relaxed text-slate-300 sm:text-lg font-light mb-12">
+              <p className="mx-auto max-w-2xl text-[15px] leading-relaxed text-slate-600 sm:text-lg font-light mb-12">
                 Ethically sourced and meticulously processed for the world's most discerning wholesale markets.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link href="/products" className="group relative overflow-hidden rounded-full bg-green px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-brown-dark transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(8,247,190,0.4)] w-full sm:w-auto">
+                <Link href="/products" className="group relative overflow-hidden rounded-full bg-green-dark px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(44,110,67,0.3)] w-full sm:w-auto shadow-md">
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     Explore Catalogue <ArrowRightIcon size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
                 </Link>
-                <Link href="/about" className="group flex items-center justify-center gap-3 rounded-full border border-glass-border bg-glass px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/30 w-full sm:w-auto">
+                <Link href="/about" className="group flex items-center justify-center gap-3 rounded-full border border-glass-border bg-white/40 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-brown-dark backdrop-blur-md transition-all hover:bg-white/60 hover:border-brown/20 w-full sm:w-auto shadow-sm">
                   Our Heritage
                 </Link>
               </div>
@@ -50,11 +50,11 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }} 
             className="absolute bottom-0 inset-x-0 mx-auto max-w-7xl px-5 sm:px-8 hidden md:block"
           >
-            <div className="grid grid-cols-4 bg-glass backdrop-blur-xl border-t border-x border-glass-border rounded-t-2xl divide-x divide-glass-border shadow-2xl">
+            <div className="grid grid-cols-4 bg-white/60 backdrop-blur-xl border-t border-x border-glass-border rounded-t-2xl divide-x divide-glass-border shadow-2xl">
               {[['05', 'Specialist Products'], ['01', 'Island Source'], ['B2B', 'Export Focused'], ['Global', 'Market Ready']].map(([value, label]) => (
-                <div key={label} className="px-6 py-8 text-center group cursor-default transition-colors hover:bg-white/5">
-                  <p className="font-serif text-4xl text-green-light transition-transform duration-500 group-hover:scale-110">{value}</p>
-                  <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-200 transition-colors">{label}</p>
+                <div key={label} className="px-6 py-8 text-center group cursor-default transition-colors hover:bg-white/80">
+                  <p className="font-serif text-4xl text-green-dark transition-transform duration-500 group-hover:scale-110">{value}</p>
+                  <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 group-hover:text-brown-dark transition-colors">{label}</p>
                 </div>
               ))}
             </div>
@@ -62,37 +62,37 @@ export default function HomePage() {
         </section>
 
         {/* Quality Section - Split Layout */}
-        <section className="py-24 sm:py-32 bg-brown relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green/5 to-transparent blur-3xl opacity-50 pointer-events-none" />
+        <section className="py-24 sm:py-32 bg-transparent relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green/10 to-transparent blur-3xl opacity-50 pointer-events-none" />
           
           <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-2 lg:px-10 relative z-10">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-br from-green to-peach/30 rounded-2xl opacity-20 blur-xl transition-all duration-700 group-hover:opacity-40" />
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] sm:aspect-square md:aspect-[4/5]">
+              <div className="absolute -inset-4 bg-gradient-to-br from-green to-peach/50 rounded-2xl opacity-30 blur-xl transition-all duration-700 group-hover:opacity-50" />
+              <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[4/5] sm:aspect-square md:aspect-[4/5]">
                 <img src="/image3.JPG" alt="Boat travelling across Sri Lankan brown waters" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0" />
-                <div className="absolute inset-0 bg-brown-dark/20 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
+                <div className="absolute inset-0 bg-peach-light/20 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
               </div>
             </motion.div>
             
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, ease: "easeOut" }}>
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-green/30 bg-green/5 mb-8">
-                <span className="h-2 w-2 rounded-full bg-green animate-pulse" />
-                <p className="text-[10px] font-extrabold uppercase leading-none tracking-[0.25em] text-green">The Sri Ganesh Standard</p>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-green-dark/30 bg-white/60 backdrop-blur-md mb-8 shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-green-dark animate-pulse" />
+                <p className="text-[10px] font-extrabold uppercase leading-none tracking-[0.25em] text-green-dark">The Sri Ganesh Standard</p>
               </div>
-              <h2 className="font-serif text-4xl leading-[1.15] text-white sm:text-5xl lg:text-6xl">
+              <h2 className="font-serif text-4xl leading-[1.15] text-brown-dark sm:text-5xl lg:text-6xl">
                 Sourced with care.<br />
-                <span className="text-slate-400">Prepared for the world.</span>
+                <span className="text-slate-500">Prepared for the world.</span>
               </h2>
-              <p className="mt-8 text-lg leading-relaxed text-slate-300 font-light">
+              <p className="mt-8 text-lg leading-relaxed text-slate-600 font-light">
                 Operating with decades of collective expertise, we are a Sri Lankan marine products export company built around unwavering quality, transparency, and durable trade partnerships.
               </p>
               <div className="mt-12 grid gap-6 sm:grid-cols-2">
                 {['Reliable supplier relationships', 'Specification-led grading', 'Export-ready documentation', 'Flexible order discussions'].map((item, i) => (
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 * i, duration: 0.5 }}
-                    key={item} className="flex gap-4 text-sm font-medium text-slate-200 items-start group"
+                    key={item} className="flex gap-4 text-sm font-medium text-slate-700 items-start group"
                   >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green/10 text-green mt-0.5 border border-green/20 transition-transform group-hover:scale-110 group-hover:bg-green group-hover:text-brown-dark">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green/10 text-green-dark mt-0.5 border border-green/30 transition-transform group-hover:scale-110 group-hover:bg-green-dark group-hover:text-white">
                       <CheckIcon size={14} />
                     </span> 
                     <span className="leading-tight pt-1">{item}</span>

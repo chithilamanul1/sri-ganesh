@@ -30,7 +30,7 @@ export default function AboutPage() {
             >
               {/* Main Image */}
               <img 
-                src="/about-legacy.jpg" 
+                src="/image1.JPG" 
                 alt="Sea cucumber harvest" 
                 className="w-[85%] rounded-3xl shadow-2xl object-cover aspect-square grayscale transition-all duration-700 hover:grayscale-0" 
               />
@@ -41,7 +41,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                src="/sand-fish.jpg" 
+                src="/image2.JPG" 
                 alt="Premium sea cucumber" 
                 className="absolute -bottom-16 -right-4 w-[55%] rounded-3xl border-8 border-brown object-cover aspect-square shadow-2xl grayscale transition-all duration-700 hover:grayscale-0" 
               />
