@@ -7,19 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        peach: {
-          DEFAULT: '#F4D5C5',
-          light: '#FAE3D6',
-          dark: '#E8C9B9'
+        ocean: {
+          light: '#1A2942',
+          DEFAULT: '#0B131E',
+          dark: '#030811'
         },
-        brown: {
-          DEFAULT: '#824D43',
-          dark: '#603932'
+        teal: {
+          light: '#38FFE0',
+          DEFAULT: '#08F7BE',
+          dark: '#02B88C'
         },
-        green: {
-          DEFAULT: '#3A8E58',
-          light: '#59B078',
-          dark: '#2C6E43'
+        coral: {
+          DEFAULT: '#FF6F61',
+          dark: '#E65345'
+        },
+        glass: {
+          DEFAULT: 'rgba(255, 255, 255, 0.05)',
+          border: 'rgba(255, 255, 255, 0.1)'
         }
       }
     },

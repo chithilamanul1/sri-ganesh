@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   ArrowUpRightIcon,
   FacebookIcon,
@@ -27,100 +27,138 @@ const navigation = [
   { label: 'Our Process', to: '/process' },
   { label: 'Contact', to: '/contact' },
 ]
+
 type SiteHeaderProps = { overlay?: boolean }
 export function SiteHeader({ overlay = false }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const textClass = overlay ? 'text-white' : 'text-brown'
-  const borderClass = overlay ? 'border-white/20' : 'border-brown/15'
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const isScrolledOrMenu = scrolled || menuOpen || !overlay
+  
   return (
-    <header className={`relative z-30 ${overlay ? 'absolute inset-x-0 top-0' : 'bg-peach'}`}>
-      <div className={`border-b ${borderClass}`}>
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <Link href="/" aria-label="Sri Ganesh Exports home" className={`group flex items-center gap-3 ${textClass}`}>
-            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain" />
-            <span className="leading-[1.05]">
-              <span className="block font-serif text-[21px] tracking-wide">Sri Ganesh</span>
-              <span className="mt-1 block text-[9px] font-bold uppercase leading-none tracking-[0.22em] text-green-dark">
-                Exports · Sri Lanka
-              </span>
+    <header 
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolledOrMenu ? 'bg-ocean/80 backdrop-blur-md border-b border-glass-border shadow-2xl py-2' : 'bg-transparent border-transparent py-4'}`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+        <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-white z-50">
+          <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90 transition-transform group-hover:scale-105 duration-300" />
+          <span className="leading-tight hidden sm:block">
+            <span className="block font-serif text-[19px] tracking-wide group-hover:text-teal-light transition-colors">Sri Ganesh</span>
+            <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-teal/80">
+              Exports · Sri Lanka
             </span>
-          </Link>
-          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Primary navigation">
-            {navigation.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === '/'}
-                className={({ isActive }: { isActive: boolean }) =>
-                  `border-b pb-1 text-[11px] font-extrabold uppercase leading-none tracking-[0.14em] transition ${isActive ? 'border-green-dark text-green-dark' : `border-transparent ${textClass} hover:border-green-dark hover:text-green-dark`}`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-green px-5 py-3 text-[11px] font-extrabold uppercase leading-none tracking-[0.12em] text-white transition hover:bg-green-dark">
-              Get a quote <ArrowUpRightIcon size={14} aria-hidden="true" />
-            </Link>
-          </nav>
-          <button
-            type="button"
-            className={`flex h-10 w-10 items-center justify-center border ${overlay ? 'border-white/35 text-white' : 'border-brown/25 text-brown'} lg:hidden`}
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            {menuOpen ? <XIcon size={20} /> : <MenuIcon size={20} />}
-          </button>
-        </div>
-      </div>
-      {menuOpen && (
-        <nav className="border-b border-brown/15 bg-peach px-5 py-4 shadow-xl lg:hidden">
+          </span>
+        </Link>
+        
+        <nav className="hidden lg:flex items-center gap-8" aria-label="Primary navigation">
           {navigation.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }: { isActive: boolean }) =>
+                `relative text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${isActive ? 'text-teal' : 'text-slate-300 hover:text-white'}`
+              }
+            >
+              {({ isActive }: { isActive: boolean }) => (
+                <>
+                  {item.label}
+                  {isActive && (
+                    <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-teal shadow-[0_0_10px_rgba(8,247,190,0.5)]" />
+                  )}
+                </>
+              )}
+            </NavLink>
+          ))}
+          <Link href="/contact" className="ml-4 inline-flex items-center justify-center gap-2 rounded-full border border-teal/50 bg-teal/10 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-teal transition-all hover:bg-teal hover:text-ocean hover:shadow-[0_0_15px_rgba(8,247,190,0.3)] hover:scale-105">
+            Get a quote <ArrowUpRightIcon size={14} className="opacity-80" />
+          </Link>
+        </nav>
+        
+        <button
+          type="button"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-glass-border text-white lg:hidden z-50 transition-colors hover:bg-white/10 hover:text-teal"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <XIcon size={18} /> : <MenuIcon size={18} />}
+        </button>
+      </div>
+      
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 bg-ocean/95 backdrop-blur-xl z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <nav className="flex flex-col gap-6 flex-grow">
+          {navigation.map((item, i) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.to === '/'}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }: { isActive: boolean }) =>
-                `block border-b border-brown/10 py-4 text-sm font-bold uppercase tracking-[0.12em] ${isActive ? 'text-green' : 'text-brown'}`
+                `text-2xl font-serif border-b border-glass-border pb-4 transition-colors ${isActive ? 'text-teal' : 'text-white hover:text-teal-light'}`
               }
             >
-              {item.label}
+              <div 
+                style={{ transform: menuOpen ? 'translateY(0)' : 'translateY(20px)', opacity: menuOpen ? 1 : 0, transitionDelay: `${i * 0.1}s`, transitionDuration: '0.4s' }}
+              >
+                {item.label}
+              </div>
             </NavLink>
           ))}
-          <Link href="/contact" onClick={() => setMenuOpen(false)} className="mt-5 inline-flex bg-green px-5 py-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
-            Get a quote
-          </Link>
         </nav>
-      )}
+        <Link 
+          href="/contact" 
+          onClick={() => setMenuOpen(false)} 
+          className="mt-8 flex w-full h-14 items-center justify-center gap-3 rounded-full bg-teal text-xs font-bold uppercase tracking-[0.15em] text-ocean-dark"
+          style={{ transform: menuOpen ? 'translateY(0)' : 'translateY(20px)', opacity: menuOpen ? 1 : 0, transitionDelay: `0.5s`, transitionDuration: '0.4s' }}
+        >
+          Get a quote <ArrowUpRightIcon size={16} />
+        </Link>
+      </div>
     </header>
   )
 }
+
 export function SiteFooter() {
   return (
-    <footer className="bg-brown-dark text-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-9 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-10">
+    <footer className="bg-ocean-dark border-t border-glass-border text-slate-300 relative overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-teal/5 blur-[100px] rounded-full pointer-events-none" />
+      
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-10 relative z-10">
         <div>
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
-            <span className="font-serif text-xl">Sri Ganesh Exports</span>
+          <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity w-fit mb-6">
+            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain brightness-0 invert opacity-90" />
+            <span className="font-serif text-2xl text-white">Sri Ganesh Exports</span>
           </Link>
-          <p className="mt-4 max-w-md text-sm leading-6 text-white/60">
-            Premium Sri Lankan marine products for international wholesale markets.
+          <p className="max-w-md text-sm leading-relaxed text-slate-400 font-light">
+            Premium Sri Lankan marine products for international wholesale markets. Operating with integrity and transparency since inception.
           </p>
         </div>
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
-          <div className="flex gap-3">
-            <a href="#" className="flex h-9 w-9 items-center justify-center border border-white/20 transition hover:border-green hover:text-green-light">
-              <FacebookIcon size={16} />
-            </a>
-            <a href="#" className="flex h-9 w-9 items-center justify-center border border-white/20 transition hover:border-green hover:text-green-light">
-              <InstagramIcon size={16} />
-            </a>
+        
+        <div className="flex flex-col gap-8 lg:items-end w-full lg:w-auto mt-6 lg:mt-0">
+          <div className="flex gap-4">
+            {[
+              { icon: FacebookIcon, label: 'Facebook' },
+              { icon: InstagramIcon, label: 'Instagram' }
+            ].map((social) => (
+              <a key={social.label} href="#" aria-label={social.label} className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-glass-border bg-glass transition-all hover:border-teal/50 hover:bg-teal/10 hover:-translate-y-1">
+                <social.icon size={16} className="text-slate-300 transition-colors group-hover:text-teal" />
+              </a>
+            ))}
           </div>
-          <div className="flex flex-col md:text-right gap-1">
-            <p className="text-xs font-semibold text-white/50">
+          
+          <div className="flex flex-col lg:text-right gap-2 border-t border-glass-border pt-6 lg:border-t-0 lg:pt-0 w-full lg:w-auto">
+            <p className="text-xs font-medium text-slate-400">
               © {new Date().getFullYear()} Sri Ganesh Exports. Sri Lanka.
             </p>
-            <p className="text-[10px] text-white/40">
+            <p className="text-[10px] uppercase tracking-widest text-slate-600">
               made by seranex.lk love with chithila manul (0728382638)
             </p>
           </div>
