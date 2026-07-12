@@ -10,11 +10,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-peach text-brown font-sans selection:bg-green selection:text-white">
       <main>
         {/* Hero Section */}
-        <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-brown text-center pt-24">
+        <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden bg-brown text-center pt-24 pb-32 md:pb-40">
           <video autoPlay loop muted playsInline src="/IMG_2292.MOV" className="absolute inset-0 h-full w-full object-cover opacity-50 mix-blend-overlay" />
           <div className="absolute inset-0 bg-gradient-to-b from-brown-dark/70 via-brown-dark/50 to-brown/90" aria-hidden="true" />
           
-          <div className="relative z-10 mx-auto max-w-4xl px-5 sm:px-8 flex flex-col items-center">
+          <div className="relative z-10 mx-auto max-w-4xl px-5 sm:px-8 flex flex-col items-center w-full my-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
               <p className="flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-green-light mb-6">
                 <span className="h-[2px] w-12 bg-green-light" /> Premium Marine Products <span className="h-[2px] w-12 bg-green-light" />
