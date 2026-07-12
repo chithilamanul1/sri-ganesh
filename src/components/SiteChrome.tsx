@@ -85,10 +85,11 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
         
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/40 border border-glass-border text-brown-dark lg:hidden z-50 transition-colors hover:bg-white/60 hover:text-green-dark shadow-sm"
+          aria-label="Toggle Menu"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white border-2 border-green/20 text-green-dark lg:hidden z-50 transition-all hover:bg-green/10 hover:border-green-dark shadow-md"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <XIcon size={18} /> : <MenuIcon size={18} />}
+          {menuOpen ? <XIcon size={20} /> : <MenuIcon size={20} />}
         </button>
       </div>
       

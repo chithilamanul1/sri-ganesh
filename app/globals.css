@@ -4,9 +4,10 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  color: #F1F5F9;
-  background: #0B131E;
+  color: #38221B;
+  background: #FAF5F0;
   scroll-behavior: smooth;
 }
 .font-serif {
