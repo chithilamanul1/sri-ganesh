@@ -138,9 +138,14 @@ export function SiteFooter() {
             <img src="/logo.png" alt="SRI GANESH EXPORT Logo" className="h-12 w-auto object-contain mix-blend-multiply" />
             <span className="font-serif text-2xl text-brown-dark font-bold">SRI GANESH EXPORT</span>
           </Link>
-          <p className="max-w-md text-sm leading-relaxed text-slate-500 font-light">
+          <p className="max-w-md text-sm leading-relaxed text-slate-500 font-light mb-6">
             Premium Sri Lankan marine products for international wholesale markets. Operating with integrity and transparency since inception.
           </p>
+          <div className="flex flex-col gap-2 text-xs text-slate-600">
+            <p><strong className="font-bold text-brown-dark">Email:</strong> <a href="mailto:selvarajahthuresh@gmail.com" className="hover:text-green-dark transition-colors">selvarajahthuresh@gmail.com</a></p>
+            <p><strong className="font-bold text-brown-dark">WhatsApp:</strong> <a href="https://wa.me/94773223057" className="hover:text-green-dark transition-colors">+94 77 322 3057</a></p>
+            <p><strong className="font-bold text-brown-dark">Address:</strong> Sri Ganesh Export<br />82/12 zoysa lane, aniyakanda road,<br />Welisara, ragama, Sri Lanka</p>
+          </div>
         </div>
         
         <div className="flex flex-col gap-8 lg:items-end w-full lg:w-auto mt-6 lg:mt-0">
