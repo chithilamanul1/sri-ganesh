@@ -24,7 +24,7 @@ export default function HomePage() {
                 <span className="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-green" />
               </div>
               <h1 className="font-serif text-5xl leading-[1.1] text-brown-dark mb-6 sm:text-7xl lg:text-8xl drop-shadow-sm">
-                Sri Lanka's Finest <br />
+                Sri Ganesh Export <br />
                 <span className="italic bg-clip-text text-transparent bg-gradient-to-r from-green to-green-dark">Ocean Harvest</span>
               </h1>
               <p className="mx-auto max-w-2xl text-[15px] leading-relaxed text-slate-600 sm:text-lg font-light mb-12">
