@@ -69,7 +69,7 @@ export default function HomePage() {
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-br from-green to-peach/50 rounded-2xl opacity-30 blur-xl transition-all duration-700 group-hover:opacity-50" />
               <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[4/5] sm:aspect-square md:aspect-[4/5]">
-                <img src="/image3.JPG" alt="Boat travelling across Sri Lankan brown waters" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0" />
+                <img src="/sandfish.jpg" alt="Premium Sand Fish" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0" />
                 <div className="absolute inset-0 bg-peach-light/20 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
               </div>
             </motion.div>
