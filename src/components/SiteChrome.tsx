@@ -14,8 +14,8 @@ function NavLink({ to, children, end, onClick, className }: any) {
   const pathname = usePathname()
   const isActive = end ? pathname === to : pathname.startsWith(to)
   return (
-    <Link href={to} onClick={onClick} className={className({ isActive })}>
-      {children}
+    <Link href={to} onClick={onClick} className={typeof className === 'function' ? className({ isActive }) : className}>
+      {typeof children === 'function' ? children({ isActive }) : children}
     </Link>
   )
 }
