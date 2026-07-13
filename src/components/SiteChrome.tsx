@@ -24,7 +24,7 @@ const navigation = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Products', to: '/products' },
-  { label: 'Our Process', to: '/process' },
+  { label: 'Our Projects', to: '/process' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -45,7 +45,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
   
   return (
     <header 
-      className={`fixed top-0 inset-x-0 z-[1000] transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/95 backdrop-blur-xl border-b border-brown/10 shadow-lg py-2' : 'bg-white/85 backdrop-blur-lg border-b border-brown/5 py-3'}`}
+      className={`fixed top-0 inset-x-0 z-[9999] transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/95 backdrop-blur-xl border-b border-brown/10 shadow-lg py-2' : 'bg-white/85 backdrop-blur-lg border-b border-brown/5 py-3'}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         <Link href="/" aria-label="SRI GANESH EXPORT home" className="group flex items-center gap-4 text-brown-dark relative z-[1001]">
@@ -94,7 +94,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 z-[999] lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-8 pb-8 ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`} style={{ backgroundColor: '#FAF5F0' }}>
+      <div className={`fixed inset-0 z-[-1] lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-28 px-8 pb-8 bg-white ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
         <nav className="flex flex-col gap-6 flex-grow">
           {navigation.map((item, i) => (
             <NavLink

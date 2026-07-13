@@ -11,7 +11,7 @@ export default function HomePage() {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-24 pb-32 md:pb-40">
-          <video autoPlay loop muted playsInline src="/IMG_2292.MOV" className="absolute inset-0 h-full w-full object-cover opacity-15 mix-blend-multiply grayscale" />
+          <video autoPlay loop muted playsInline src="/sandfish.mp4" poster="/sand-fish.jpg" className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent" aria-hidden="true" />
           
           <div className="relative z-10 mx-auto max-w-5xl px-5 sm:px-8 flex flex-col items-center w-full my-auto text-center">
