@@ -28,7 +28,7 @@ export default function ContactPage() {
               
               <address className="mt-12 not-italic flex flex-col gap-6">
                 {[
-                  { icon: MailIcon, label: "Email us", value: "exports@sriganeshexports.lk", href: "mailto:exports@sriganeshexports.lk" },
+                  { icon: MailIcon, label: "Email us", value: "sriganeshexport2004@gmail.com", href: "mailto:sriganeshexport2004@gmail.com" },
                   { icon: PhoneIcon, label: "Call / WhatsApp", value: "+94 77 322 3057", href: "tel:+94773223057" },
                 ].map((item, i) => (
                   <motion.a 
