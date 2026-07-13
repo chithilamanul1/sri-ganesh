@@ -142,7 +142,7 @@ export function SiteFooter() {
             Premium Sri Lankan marine products for international wholesale markets. Operating with integrity and transparency since inception.
           </p>
           <div className="flex flex-col gap-2 text-xs text-slate-600">
-            <p><strong className="font-bold text-brown-dark">Email:</strong> <a href="mailto:selvarajahthuresh@gmail.com" className="hover:text-green-dark transition-colors">selvarajahthuresh@gmail.com</a></p>
+            <p><strong className="font-bold text-brown-dark">Email:</strong> <a href="mailto:sriganeshexport2004@gmail.com" className="hover:text-green-dark transition-colors">sriganeshexport2004@gmail.com</a></p>
             <p><strong className="font-bold text-brown-dark">WhatsApp:</strong> <a href="https://wa.me/94773223057" className="hover:text-green-dark transition-colors">+94 77 322 3057</a></p>
             <p><strong className="font-bold text-brown-dark">Address:</strong> Sri Ganesh Export<br />82/12 zoysa lane, aniyakanda road,<br />Welisara, ragama, Sri Lanka</p>
           </div>
