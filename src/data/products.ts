@@ -28,7 +28,7 @@ export const products: Product[] = [
     name: 'Flower Tiger',
     species: 'Holothuria spp.',
     description: 'A premium sea cucumber variety, graded and packed with attention to presentation, preservation, and shipment readiness.',
-    image: '/image3.JPG',
+    image: '/flower-tiger.png',
     tag: 'High demand',
     specification: 'Prepared to suit wholesale quantities and destination needs.',
   },
