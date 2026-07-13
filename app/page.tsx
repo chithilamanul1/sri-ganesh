@@ -28,7 +28,7 @@ export default function HomePage() {
                 <span className="italic bg-clip-text text-transparent bg-gradient-to-r from-green to-green-dark">Ocean Harvest</span>
               </h1>
               <p className="mx-auto max-w-2xl text-[15px] leading-relaxed text-slate-600 sm:text-lg font-light mb-12">
-                Ethically sourced and meticulously processed for the world's most discerning wholesale markets.
+                Combining Sri Lanka’s natural marine resources with responsible aquaculture innovation to create a sustainable future for global seafood markets.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -51,7 +51,7 @@ export default function HomePage() {
             className="absolute bottom-0 inset-x-0 mx-auto max-w-7xl px-5 sm:px-8 hidden md:block"
           >
             <div className="grid grid-cols-4 bg-white/60 backdrop-blur-xl border-t border-x border-glass-border rounded-t-2xl divide-x divide-glass-border shadow-2xl">
-              {[['05', 'Specialist Products'], ['01', 'Island Source'], ['B2B', 'Export Focused'], ['Global', 'Market Ready']].map(([value, label]) => (
+              {[['01', 'Export Trade'], ['02', 'Sea Cucumber Farm'], ['03', 'Hatchery Core'], ['B2B', 'Global Supply']].map(([value, label]) => (
                 <div key={label} className="px-6 py-8 text-center group cursor-default transition-colors hover:bg-white/80">
                   <p className="font-serif text-4xl text-green-dark transition-transform duration-500 group-hover:scale-110">{value}</p>
                   <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 group-hover:text-brown-dark transition-colors">{label}</p>

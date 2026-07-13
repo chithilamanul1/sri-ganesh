@@ -48,12 +48,12 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       className={`fixed top-0 inset-x-0 z-[1000] transition-all duration-300 ${isScrolledOrMenu ? 'bg-white/95 backdrop-blur-xl border-b border-brown/10 shadow-lg py-2' : 'bg-white/85 backdrop-blur-lg border-b border-brown/5 py-3'}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        <Link href="/" aria-label="Sri Ganesh Exports home" className="group flex items-center gap-4 text-brown-dark relative z-[1001]">
-          <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300 mix-blend-multiply" />
+        <Link href="/" aria-label="SRI GANESH EXPORT home" className="group flex items-center gap-4 text-brown-dark relative z-[1001]">
+          <img src="/logo.png" alt="SRI GANESH EXPORT Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300 mix-blend-multiply" />
           <span className="leading-tight hidden sm:block">
-            <span className="block font-serif text-[19px] tracking-wide group-hover:text-green-dark transition-colors text-brown-dark font-bold">Sri Ganesh</span>
+            <span className="block font-serif text-[19px] tracking-wide group-hover:text-green-dark transition-colors text-brown-dark font-bold">SRI GANESH EXPORT</span>
             <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-green-dark/90">
-              Exports · Sri Lanka
+              Sri Lanka
             </span>
           </span>
         </Link>
@@ -135,8 +135,8 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-10 relative z-10">
         <div>
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity w-fit mb-6">
-            <img src="/logo.png" alt="Sri Ganesh Exports Logo" className="h-12 w-auto object-contain mix-blend-multiply" />
-            <span className="font-serif text-2xl text-brown-dark font-bold">Sri Ganesh Exports</span>
+            <img src="/logo.png" alt="SRI GANESH EXPORT Logo" className="h-12 w-auto object-contain mix-blend-multiply" />
+            <span className="font-serif text-2xl text-brown-dark font-bold">SRI GANESH EXPORT</span>
           </Link>
           <p className="max-w-md text-sm leading-relaxed text-slate-500 font-light">
             Premium Sri Lankan marine products for international wholesale markets. Operating with integrity and transparency since inception.
@@ -157,7 +157,7 @@ export function SiteFooter() {
           
           <div className="flex flex-col lg:text-right gap-2 border-t border-glass-border pt-6 lg:border-t-0 lg:pt-0 w-full lg:w-auto">
             <p className="text-xs font-medium text-slate-600">
-              © {new Date().getFullYear()} Sri Ganesh Exports. Sri Lanka.
+              © {new Date().getFullYear()} SRI GANESH EXPORT. Sri Lanka.
             </p>
             <p className="text-[10px] uppercase tracking-widest text-slate-400">
               made by seranex.lk love with chithila manul (0728382638)
