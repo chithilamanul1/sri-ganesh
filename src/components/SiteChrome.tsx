@@ -94,7 +94,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 z-[-1] lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-28 px-8 pb-8 bg-white ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+      <div className={`fixed inset-0 z-[1000] lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-28 px-8 pb-8 bg-white/95 backdrop-blur-xl ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
         <nav className="flex flex-col gap-6 flex-grow">
           {navigation.map((item, i) => (
             <NavLink
