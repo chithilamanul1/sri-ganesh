@@ -107,7 +107,7 @@ export default function AboutPage() {
                 The foundation of our business was established in 1972 by our founder’s father through Vinayaga Stores, a trusted name built on commitment, quality, and strong relationships with customers and suppliers.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-slate-600 font-light max-w-2xl">
-                Continuing this legacy, SRI GANESH EXPORT was officially established in 2004 with a vision to bring Sri Lanka’s premium marine resources to international markets. Over the years, the company has developed strong expertise in sourcing, processing, and exporting high-quality seafood products, especially dried sea cucumber (Beche-de-mer).
+                Continuing this legacy, SRI GANESH EXPORT was officially established in 2004 by our Proprietor, Mr. Selvarajah Thuresh, with a vision to bring Sri Lanka’s premium marine resources to international markets. Over the years, the company has developed strong expertise in sourcing, processing, and exporting high-quality seafood products, especially dried sea cucumber (Beche-de-mer), proudly exporting to countries like Singapore, Malaysia, and Hong Kong.
               </p>
 
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
